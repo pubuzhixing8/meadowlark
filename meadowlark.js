@@ -1,4 +1,5 @@
 var express = require('express');
+var fortune = require('./lib/fortune.js');
 
 var app = express();
 
@@ -17,7 +18,7 @@ app.get('/',function(req,res) {
 app.get('/about',function(req,res) {
     // res.type('text/plain');
     // res.send('About Meadowlark Travel');
-    res.render('about');
+    res.render('about',{fortune:fortune.getFortune()});
 });
 app.use(express.static(__dirname+'/pubulic'));
 //定制404页面
