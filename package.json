@@ -1,0 +1,15 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "旅行社网站",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "meadow"
+  },
+  "author": "xingxing",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express3-handlebars": "^0.5.2"
+  }
+}
