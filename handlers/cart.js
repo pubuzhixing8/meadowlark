@@ -1,6 +1,6 @@
 var Vacation = require('../models/vacation.js'),
-	Q = require('q'),
-	emailService = require('../lib/email.js')(require('../credentials.js'));
+	Q = require('q');
+	//emailService = require('../lib/email.js')(require('../credentials.js'));
 
 var VALID_EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
@@ -89,9 +89,9 @@ exports.checkoutProcessPost = function(req, res){
     res.render('email/cart-thank-you', 
     	{ layout: null, cart: cart }, function(err,html){
 	        if(err) console.error('error in email template: ' + err.stack);
-	        emailService.send(cart.billing.email,
-	        	'Thank you for booking your trip with Meadowlark Travel!',
-	        	html);
+	        // emailService.send(cart.billing.email,
+	        // 	'Thank you for booking your trip with Meadowlark Travel!',
+	        // 	html);
 	    }
     );
     res.render('cart-thank-you', { cart: cart });
