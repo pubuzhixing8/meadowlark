@@ -11,3 +11,10 @@ gulp.task('JsHint',()=>{
     .pipe(jshint())
     .pipe(jshint.reporter());
 });
+gulp.task('aaa',()=>{
+    gulp.src(['meadowlark.js','pubulic/js/**/*.js',
+    'lib/**/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter());
+});
+
